@@ -1,0 +1,21 @@
+CREATE DATABASE plannit;
+use plannit;
+CREATE TABLE 'events' (
+  'id' varchar(40) PRIMARY KEY,
+  'contactID' varchar(40),
+  'name' varchar(20),
+  'day' int(11),
+  'place' varchar(40),
+  'startTime' int(11),
+  'endTime' int(11),
+  'sharedAt' timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  'shareID' varchar(40)
+);
+CREATE TABLE 'contacts' (
+  'id' varchar(40) PRIMARY KEY,
+  'name' varchar(20),
+  'flag' varchar(20),
+  'color' varchar(20),
+  'sharedAt' timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  'shareID' varchar(40)
+);
