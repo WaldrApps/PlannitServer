@@ -1,10 +1,10 @@
 server {
-    listen  80;
+    listen  ${NGINX_PORT};
 
     root /var/www/plannit;
     index index.php index.htm index.html;
 
-    server_name dummy;
+    server_name ${SERVER_NAME};
 
     location / {
         try_files $uri /index.php$is_args$args;
